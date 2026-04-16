@@ -102,6 +102,11 @@
       "strongest":{ "light": "#242423", "dark": "#F2F2E9" }
     }
   },
+  "typography_web": {
+    "provider": "Adobe Fonts",
+    "stylesheet": "https://use.typekit.net/niz2mlc.css",
+    "usage": "Include this stylesheet in the <head> of any HTML page to load Bookmania, Tangier, and Quasimoda. Agents generating HTML must include this link tag: <link rel=\"stylesheet\" href=\"https://use.typekit.net/niz2mlc.css\">"
+  },
   "typography": {
     "heading": {
       "family": "Bookmania",
