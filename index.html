@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athens Church — Brand Kit</title>
+  <style>
+    @font-face {
+      font-family: 'Helvetica Neue';
+      src: url('fonts/helvetica-neue/helveticaneue.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Helvetica Neue';
+      src: url('fonts/helvetica-neue/helveticaneueitalic.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Helvetica Neue';
+      src: url('fonts/helvetica-neue/HelveticaNeueMediumExtended.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Helvetica Neue';
+      src: url('fonts/helvetica-neue/HelveticaNeueMediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cinnabar:  #EF413D;
+      --charcoal:  #242423;
+      --alabaster: #F2F2E9;
+      --blue-gray: #5D6A91;
+      --peach:     #FAC088;
+      --aluminum:  #B8B8B2;
+    }
+
+    body {
+      background: var(--charcoal);
+      color: var(--alabaster);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(242,242,233,0.12);
+      padding: 48px 64px 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    header img {
+      height: 36px;
+      width: auto;
+    }
+
+    header p {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--aluminum);
+      text-align: right;
+    }
+
+    .hero {
+      padding: 80px 64px 72px;
+      border-bottom: 1px solid rgba(242,242,233,0.12);
+      max-width: 760px;
+    }
+
+    .label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      color: var(--alabaster);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--aluminum);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+
+    .hero code {
+      background: rgba(242,242,233,0.08);
+      border: 1px solid rgba(242,242,233,0.14);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--peach);
+    }
+
+    .quick-start {
+      padding: 56px 64px;
+      border-bottom: 1px solid rgba(242,242,233,0.12);
+    }
+
+    .quick-start h2 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--aluminum);
+      margin-bottom: 24px;
+    }
+
+    .code-block {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(242,242,233,0.1);
+      border-radius: 8px;
+      padding: 24px 28px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--alabaster);
+      max-width: 680px;
+    }
+
+    .code-block .comment { color: var(--aluminum); }
+    .code-block .string  { color: var(--peach); }
+    .code-block .key     { color: var(--blue-gray); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .section {
+      padding: 56px 64px;
+      border-bottom: 1px solid rgba(242,242,233,0.12);
+    }
+
+    .section:nth-child(odd) {
+      border-right: 1px solid rgba(242,242,233,0.12);
+    }
+
+    .section h2 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--aluminum);
+      margin-bottom: 28px;
+    }
+
+    /* Colors */
+    .color-swatches {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .swatch-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .swatch-info .name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--alabaster);
+    }
+
+    .swatch-info .hex {
+      font-size: 11px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--aluminum);
+      margin-top: 1px;
+    }
+
+    /* Typography */
+    .type-sample {
+      margin-bottom: 24px;
+    }
+
+    .type-sample .type-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--aluminum);
+      margin-bottom: 6px;
+    }
+
+    .type-sample .sample-text {
+      font-size: 20px;
+      color: var(--alabaster);
+      line-height: 1.3;
+    }
+
+    .sample-helvetica { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+    .sample-bookmania { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+    .sample-body      { font-family: Georgia, serif; font-size: 16px; }
+
+    /* Logos */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .logo-tile {
+      background: rgba(242,242,233,0.04);
+      border: 1px solid rgba(242,242,233,0.1);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80px;
+    }
+
+    .logo-tile.dark-bg {
+      background: var(--alabaster);
+    }
+
+    .logo-tile img {
+      max-height: 40px;
+      max-width: 100%;
+      width: auto;
+    }
+
+    /* Campuses */
+    .campus-card {
+      background: rgba(242,242,233,0.04);
+      border: 1px solid rgba(242,242,233,0.1);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+
+    .campus-card .campus-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--alabaster);
+      letter-spacing: 0.04em;
+    }
+
+    .campus-card .campus-address {
+      font-size: 12px;
+      color: var(--aluminum);
+      margin-top: 4px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* Elements */
+    .element-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(242,242,233,0.08);
+    }
+
+    .element-row:last-child { border-bottom: none; }
+
+    .element-row img {
+      height: 28px;
+      filter: invert(1);
+      opacity: 0.8;
+    }
+
+    .element-row span {
+      font-size: 12px;
+      color: var(--aluminum);
+    }
+
+    /* Persona */
+    .persona {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .persona img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(242,242,233,0.15);
+    }
+
+    .persona .persona-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--alabaster);
+    }
+
+    .persona .persona-title {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      margin-top: 3px;
+    }
+
+    .persona .persona-bio {
+      font-size: 12px;
+      color: var(--aluminum);
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* Agent instructions */
+    .agent-box {
+      padding: 56px 64px;
+      border-bottom: 1px solid rgba(242,242,233,0.12);
+    }
+
+    .agent-box h2 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--aluminum);
+      margin-bottom: 20px;
+    }
+
+    .rule-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 700px;
+    }
+
+    .rule-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--aluminum);
+      line-height: 1.5;
+    }
+
+    .rule-list li::before {
+      content: '—';
+      color: var(--cinnabar);
+      flex-shrink: 0;
+    }
+
+    footer {
+      padding: 40px 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-size: 11px;
+      color: var(--aluminum);
+      letter-spacing: 0.06em;
+    }
+
+    footer a {
+      color: var(--cinnabar);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header, .hero, .quick-start, .section, .agent-box, footer { padding: 40px 24px; }
+      .grid { grid-template-columns: 1fr; }
+      .section:nth-child(odd) { border-right: none; }
+      .logo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logos/logomark/horizontal/athens-church-logomark-horizontal-alabaster.png" alt="Athens Church" />
+    <p>Brand Kit &mdash; Machine-readable brand assets<br>for AI agents and automation</p>
+  </header>
+
+  <div class="hero">
+    <p class="label">Agent Resource</p>
+    <h1>Athens Church Brand Kit</h1>
+    <p>
+      This site is the single source of truth for Athens Church's visual identity.
+      It is designed to be consumed by AI agents and automation tools to produce consistently branded work —
+      correct colors, fonts, logos, voice, and campus assets, automatically.
+      The primary payload is <code>brand-kit.json</code>.
+    </p>
+  </div>
+
+  <div class="quick-start">
+    <h2>How to use this as an agent</h2>
+    <div class="code-block">
+      <span class="comment"># Step 1 — Fetch the brand kit at runtime</span><br>
+      GET https://branding.athenschurch.com/brand-kit.json<br><br>
+      <span class="comment"># Step 2 — Construct asset URLs using base_url + file path</span><br>
+      <span class="key">base_url</span> + <span class="string">"/"</span> + <span class="key">logos.lockups[0].assets[0].file</span><br><br>
+      <span class="comment"># Step 3 — Apply brand rules from the rules[] array</span><br>
+      <span class="comment"># Step 4 — Write in the voice defined in voice.summary</span>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="section">
+      <h2>Color Palette</h2>
+      <div class="color-swatches">
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#EF413D;"></div>
+          <div class="swatch-info"><div class="name">Cinnabar</div><div class="hex">#EF413D &mdash; Primary</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#242423;"></div>
+          <div class="swatch-info"><div class="name">Charcoal</div><div class="hex">#242423 &mdash; Dark / Text</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#F2F2E9; border-color:rgba(255,255,255,0.2);"></div>
+          <div class="swatch-info"><div class="name">Alabaster</div><div class="hex">#F2F2E9 &mdash; Light / Background</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#5D6A91;"></div>
+          <div class="swatch-info"><div class="name">Blue Gray</div><div class="hex">#5D6A91 &mdash; Accent</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#FAC088;"></div>
+          <div class="swatch-info"><div class="name">Peach</div><div class="hex">#FAC088 &mdash; Secondary</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-dot" style="background:#B8B8B2;"></div>
+          <div class="swatch-info"><div class="name">Aluminum</div><div class="hex">#B8B8B2 &mdash; Neutral</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Typography</h2>
+      <div class="type-sample">
+        <div class="type-label">Bookmania Italic — Headings</div>
+        <div class="sample-text sample-bookmania">Athens Church</div>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">Helvetica Neue Medium — Subheadings</div>
+        <div class="sample-text sample-helvetica" style="font-size:14px;">Athens Church</div>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">Quasimoda — Body Copy</div>
+        <div class="sample-text sample-body" style="font-size:14px; font-style:normal;">Leading people into a growing relationship with Jesus Christ.</div>
+      </div>
+      <div class="type-sample" style="margin-bottom:0;">
+        <div class="type-label">Tangier Italic — Special Treatments</div>
+        <div class="sample-text" style="font-style:italic; font-family:Georgia,serif; font-size:18px;">Athens</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Logos</h2>
+      <div class="logo-grid">
+        <div class="logo-tile">
+          <img src="logos/logomark/horizontal/athens-church-logomark-horizontal-alabaster.png" alt="Logomark Horizontal — Alabaster" />
+        </div>
+        <div class="logo-tile dark-bg">
+          <img src="logos/logomark/horizontal/athens-church-logomark-horizontal-charcoal.png" alt="Logomark Horizontal — Charcoal" />
+        </div>
+        <div class="logo-tile">
+          <img src="logos/logomark/stacked/athens-church-logomark-stacked-alabaster.png" alt="Logomark Stacked — Alabaster" />
+        </div>
+        <div class="logo-tile dark-bg">
+          <img src="logos/brandmark/athens-church-brandmark-charcoal.png" alt="Brandmark — Charcoal" style="max-height:52px;" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Campuses</h2>
+      <div class="campus-card">
+        <div class="campus-name">Atlanta Highway</div>
+        <div class="campus-address">10 Huntington Road, Athens GA 30606</div>
+        <div class="campus-address" style="margin-top:4px;">33.937831, -83.4684521</div>
+      </div>
+      <div class="campus-card">
+        <div class="campus-name">Beechwood</div>
+        <div class="campus-address">196 Alps Road, Athens GA 30606</div>
+        <div class="campus-address" style="margin-top:4px;">33.9460529, -83.4105799</div>
+      </div>
+      <div style="margin-top:20px;">
+        <img src="sub-brands/atlanta-highway/atlhwy-logomark-horizontal.png" alt="ATLHWY" style="max-height:28px; opacity:0.8; display:block; margin-bottom:12px;" />
+        <img src="sub-brands/beechwood/beechwood-logomark-horizontal.png" alt="Beechwood" style="max-height:28px; opacity:0.8;" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Brand Elements</h2>
+      <div class="element-row">
+        <img src="assets/elements/athens-church-arrow.svg" alt="Arrow element" />
+        <span>Arrow — directional accent, use over content or backgrounds</span>
+      </div>
+      <div class="element-row">
+        <img src="assets/elements/athens-church-dots.svg" alt="Dots element" />
+        <span>Dots — texture accent, use alongside content blocks</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Leadership</h2>
+      <div class="persona">
+        <img src="assets/personas/sean-seay/sean-seay-headshot-square.jpg" alt="Sean Seay" />
+        <div>
+          <div class="persona-name">Sean Seay</div>
+          <div class="persona-title">Lead Pastor</div>
+        </div>
+      </div>
+      <p class="persona-bio" style="margin-top:16px; font-size:12px; color:var(--aluminum); line-height:1.7;">
+        Founding Lead Pastor of Athens Church since January 2005. Former Director of Equipping at North Point Ministries. Athens Church launched as a strategic partnership with North Point to reach people in the Athens, GA community who were far from God.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="agent-box">
+    <h2>Brand Rules for AI Agents</h2>
+    <ul class="rule-list">
+      <li>Load <code style="font-size:11px; background:rgba(255,255,255,0.06); padding:1px 5px; border-radius:3px; color:var(--peach);">brand-kit.json</code> at runtime before generating any Athens Church content. Do not rely on memory.</li>
+      <li>Construct all asset URLs as: <code style="font-size:11px; background:rgba(255,255,255,0.06); padding:1px 5px; border-radius:3px; color:var(--peach);">base_url + "/" + file</code></li>
+      <li>For dark backgrounds use alabaster or white logo variants. For light backgrounds use charcoal or cinnabar variants.</li>
+      <li>Typography hierarchy: Bookmania Italic (headings) → Helvetica Neue (subheadings) → Quasimoda (body). Do not substitute licensed typefaces.</li>
+      <li>For campus-specific work, use the appropriate sub_brand logos from <code style="font-size:11px; background:rgba(255,255,255,0.06); padding:1px 5px; border-radius:3px; color:var(--peach);">sub_brands[]</code>.</li>
+      <li>Write in the Athens Church voice: warm, genuine, and accessible. Avoid insider church language. Capitalize He/Him/His when referring to God.</li>
+      <li>All brand rules are enumerated in the <code style="font-size:11px; background:rgba(255,255,255,0.06); padding:1px 5px; border-radius:3px; color:var(--peach);">rules[]</code> array of brand-kit.json.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; Athens Church &mdash; <a href="https://www.athenschurch.com">athenschurch.com</a></p>
+    <p>Brand Kit v2026.04 &mdash; <a href="brand-kit.json">brand-kit.json</a></p>
+  </footer>
+
+</body>
+</html>

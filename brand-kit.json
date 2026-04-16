@@ -1,0 +1,339 @@
+{
+  "version": "2026.04",
+  "base_url": "https://branding.athenschurch.com",
+  "brand": {
+    "name": "Athens Church",
+    "tagline": "Leading people into a growing relationship with Jesus Christ.",
+    "website": "https://www.athenschurch.com",
+    "founded": 2005,
+    "partnership": "North Point Ministries"
+  },
+  "campuses": [
+    {
+      "id": "atlanta_highway",
+      "name": "Atlanta Highway",
+      "short_name": "ATLHWY",
+      "type": "campus",
+      "street": "10 Huntington Road",
+      "city": "Athens",
+      "state": "GA",
+      "zip": "30606",
+      "country": "US",
+      "lat": 33.937831,
+      "lng": -83.4684521
+    },
+    {
+      "id": "beechwood",
+      "name": "Beechwood",
+      "short_name": "Beechwood",
+      "type": "campus",
+      "street": "196 Alps Road",
+      "city": "Athens",
+      "state": "GA",
+      "zip": "30606",
+      "country": "US",
+      "lat": 33.9460529,
+      "lng": -83.4105799
+    }
+  ],
+  "color_system": {
+    "palette": {
+      "primary": {
+        "name": "Cinnabar",
+        "hex": "#EF413D",
+        "rgb": "239, 65, 61",
+        "cmyk": "0, 90, 80, 0",
+        "pms": "2034 C",
+        "text_on": "#F2F2E9",
+        "usage": "Primary brand color — hero elements, buttons, key accents, brand-forward design moments"
+      },
+      "dark": {
+        "name": "Charcoal",
+        "hex": "#242423",
+        "rgb": "36, 36, 35",
+        "cmyk": "71, 65, 65, 71",
+        "pms": "Black",
+        "text_on": "#F2F2E9",
+        "usage": "Primary text color and dark backgrounds"
+      },
+      "light": {
+        "name": "Alabaster",
+        "hex": "#F2F2E9",
+        "rgb": "242, 242, 233",
+        "cmyk": "4, 2, 7, 0",
+        "pms": "White",
+        "text_on": "#242423",
+        "usage": "Primary light background and text-on-dark surfaces"
+      },
+      "accent": {
+        "name": "Blue Gray",
+        "hex": "#5D6A91",
+        "rgb": "93, 106, 145",
+        "cmyk": "71, 58, 24, 4",
+        "pms": "7667 C",
+        "text_on": "#FFFFFF",
+        "usage": "Supporting accent — UI elements, secondary content, complementary color pairings"
+      },
+      "secondary": {
+        "name": "Peach",
+        "hex": "#FAC088",
+        "rgb": "250, 192, 136",
+        "cmyk": "1, 28, 51, 0",
+        "pms": "155 C",
+        "text_on": "#242423",
+        "usage": "Warm secondary accent — highlights, illustrative elements, seasonal or warm-toned layouts"
+      },
+      "neutral": {
+        "name": "Aluminum",
+        "hex": "#B8B8B2",
+        "rgb": "184, 184, 178",
+        "cmyk": "29, 22, 27, 0",
+        "pms": "429 C",
+        "text_on": "#242423",
+        "usage": "Neutral — borders, dividers, subtle backgrounds, inactive states"
+      }
+    },
+    "interface": {
+      "description": "Neutral surface scale from lightest to darkest. Inverts in dark mode — softest becomes the darkest background, strongest becomes the lightest text.",
+      "softest": { "light": "#F2F2E9", "dark": "#1A1A19" },
+      "soft":    { "light": "#E5E5DA", "dark": "#2E2E2D" },
+      "medium":  { "light": "#B8B8B2", "dark": "#B8B8B2" },
+      "strong":  { "light": "#5D6A91", "dark": "#E5E5DA" },
+      "strongest":{ "light": "#242423", "dark": "#F2F2E9" }
+    }
+  },
+  "typography": {
+    "heading": {
+      "family": "Bookmania",
+      "style": "Italic",
+      "case": "Sentence case",
+      "usage": "All headings — H1 through H3",
+      "source": "licensed",
+      "note": "Licensed typeface. Available via Adobe Fonts. Do not substitute."
+    },
+    "display": {
+      "family": "Tangier",
+      "style": "Italic",
+      "case": "Uppercase",
+      "usage": "Special typographic treatments and decorative display moments alongside Bookmania",
+      "source": "licensed",
+      "note": "Licensed typeface. Use sparingly and intentionally. Do not substitute."
+    },
+    "subheading": {
+      "family": "Helvetica Neue",
+      "style": "Medium Extended",
+      "case": "Uppercase",
+      "usage": "Subheadings, labels, navigation, all-caps UI text",
+      "source": "self-hosted",
+      "files": {
+        "400":        "fonts/helvetica-neue/helveticaneue.ttf",
+        "400italic":  "fonts/helvetica-neue/helveticaneueitalic.ttf",
+        "500":        "fonts/helvetica-neue/HelveticaNeueMediumExtended.ttf",
+        "500italic":  "fonts/helvetica-neue/HelveticaNeueMediumItalic.ttf"
+      }
+    },
+    "body": {
+      "family": "Quasimoda",
+      "style": "Regular",
+      "case": "Sentence case",
+      "usage": "All body copy, paragraph text, captions",
+      "source": "licensed",
+      "note": "Licensed typeface. Available via Adobe Fonts. Do not substitute."
+    }
+  },
+  "logos": {
+    "note": "SVG files are single-color paths that render in Charcoal (#242423) by default. Apply CSS fill overrides to use alternate brand colors. PNG files are pre-rendered in named color variants — choose the variant appropriate for your background.",
+    "color_variants": {
+      "charcoal":  { "hex": "#242423", "best_on": "light backgrounds" },
+      "alabaster": { "hex": "#F2F2E9", "best_on": "dark backgrounds" },
+      "cinnabar":  { "hex": "#EF413D", "best_on": "light or neutral backgrounds" },
+      "blue-gray": { "hex": "#5D6A91", "best_on": "light backgrounds" },
+      "peach":     { "hex": "#FAC088", "best_on": "dark or charcoal backgrounds" },
+      "white":     { "hex": "#FFFFFF", "best_on": "dark or colored backgrounds" },
+      "black":     { "hex": "#000000", "best_on": "light backgrounds" }
+    },
+    "lockups": [
+      {
+        "type": "logomark_horizontal",
+        "description": "Primary logo — A brandmark + ATHENS CHURCH wordmark side by side. Use this by default in all marketing and communications contexts.",
+        "assets": [
+          { "variant": "charcoal",  "format": "svg", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal.svg" },
+          { "variant": "charcoal",  "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-charcoal.png" },
+          { "variant": "alabaster", "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-alabaster.png" },
+          { "variant": "cinnabar",  "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-cinnabar.png" },
+          { "variant": "blue-gray", "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-blue-gray.png" },
+          { "variant": "peach",     "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-peach.png" },
+          { "variant": "white",     "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-white.png" },
+          { "variant": "black",     "format": "png", "file": "logos/logomark/horizontal/athens-church-logomark-horizontal-black.png" }
+        ]
+      },
+      {
+        "type": "logomark_stacked",
+        "description": "Stacked logo — A brandmark centered above ATHENS CHURCH wordmark. Use when horizontal space is limited (square formats, mobile, social avatars).",
+        "assets": [
+          { "variant": "charcoal",  "format": "svg", "file": "logos/logomark/stacked/athens-church-logomark-stacked.svg" },
+          { "variant": "charcoal",  "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-charcoal.png" },
+          { "variant": "alabaster", "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-alabaster.png" },
+          { "variant": "cinnabar",  "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-cinnabar.png" },
+          { "variant": "blue-gray", "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-blue-gray.png" },
+          { "variant": "peach",     "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-peach.png" },
+          { "variant": "white",     "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-white.png" },
+          { "variant": "black",     "format": "png", "file": "logos/logomark/stacked/athens-church-logomark-stacked-black.png" }
+        ]
+      },
+      {
+        "type": "brandmark",
+        "description": "Icon-only — the A mark alone. Use for favicons, app icons, profile avatars, and contexts where ATHENS CHURCH is already established.",
+        "assets": [
+          { "variant": "charcoal",  "format": "svg", "file": "logos/brandmark/athens-church-brandmark.svg" },
+          { "variant": "charcoal",  "format": "png", "file": "logos/brandmark/athens-church-brandmark-charcoal.png" },
+          { "variant": "alabaster", "format": "png", "file": "logos/brandmark/athens-church-brandmark-alabaster.png" },
+          { "variant": "cinnabar",  "format": "png", "file": "logos/brandmark/athens-church-brandmark-cinnabar.png" },
+          { "variant": "blue-gray", "format": "png", "file": "logos/brandmark/athens-church-brandmark-blue-gray.png" },
+          { "variant": "peach",     "format": "png", "file": "logos/brandmark/athens-church-brandmark-peach.png" },
+          { "variant": "white",     "format": "png", "file": "logos/brandmark/athens-church-brandmark-white.png" },
+          { "variant": "black",     "format": "png", "file": "logos/brandmark/athens-church-brandmark-black.png" }
+        ]
+      },
+      {
+        "type": "wordmark",
+        "description": "Text-only — ATHENS CHURCH without the A mark. Use when the brandmark is separately established or in text-heavy contexts.",
+        "assets": [
+          { "variant": "charcoal",  "format": "svg", "file": "logos/wordmark/athens-church-wordmark.svg" },
+          { "variant": "charcoal",  "format": "png", "file": "logos/wordmark/athens-church-wordmark-charcoal.png" },
+          { "variant": "alabaster", "format": "png", "file": "logos/wordmark/athens-church-wordmark-alabaster.png" },
+          { "variant": "cinnabar",  "format": "png", "file": "logos/wordmark/athens-church-wordmark-cinnabar.png" },
+          { "variant": "blue-gray", "format": "png", "file": "logos/wordmark/athens-church-wordmark-blue-gray.png" },
+          { "variant": "peach",     "format": "png", "file": "logos/wordmark/athens-church-wordmark-peach.png" },
+          { "variant": "white",     "format": "png", "file": "logos/wordmark/athens-church-wordmark-white.png" },
+          { "variant": "black",     "format": "png", "file": "logos/wordmark/athens-church-wordmark-black.png" }
+        ]
+      }
+    ],
+    "rules": [
+      "Always prefer logomark_horizontal as the primary logo when space allows.",
+      "Use logomark_stacked when horizontal space is limited.",
+      "Use the brandmark (A only) for favicons, avatars, and app icons.",
+      "Maintain clear space equal to the radius of a 20px circle on all sides of any logo.",
+      "Approved backgrounds: Alabaster (#F2F2E9), white, Charcoal (#242423), and solid brand color fields. Avoid busy or patterned backgrounds.",
+      "For light backgrounds: prefer charcoal, cinnabar, or blue-gray variants.",
+      "For dark backgrounds: prefer alabaster or white variants.",
+      "Do not alter, stretch, recolor outside approved variants, or add effects to any logo."
+    ]
+  },
+  "sub_brands": [
+    {
+      "id": "atlanta_highway",
+      "type": "campus",
+      "name": "Athens Church — Atlanta Highway",
+      "short_name": "ATLHWY",
+      "logos": {
+        "assets": [
+          { "type": "logomark_horizontal", "format": "png", "file": "sub-brands/atlanta-highway/atlhwy-logomark-horizontal.png" },
+          { "type": "logomark_stacked",    "format": "png", "file": "sub-brands/atlanta-highway/atlhwy-logomark-stacked.png" },
+          { "type": "wordmark_horizontal", "format": "png", "file": "sub-brands/atlanta-highway/atlhwy-wordmark-horizontal.png" },
+          { "type": "wordmark_stacked",    "format": "png", "file": "sub-brands/atlanta-highway/atlhwy-wordmark-stacked.png" }
+        ]
+      }
+    },
+    {
+      "id": "beechwood",
+      "type": "campus",
+      "name": "Athens Church — Beechwood",
+      "short_name": "Beechwood",
+      "logos": {
+        "assets": [
+          { "type": "logomark_horizontal", "format": "png", "file": "sub-brands/beechwood/beechwood-logomark-horizontal.png" },
+          { "type": "logomark_stacked",    "format": "png", "file": "sub-brands/beechwood/beechwood-logomark-stacked.png" },
+          { "type": "wordmark_horizontal", "format": "png", "file": "sub-brands/beechwood/beechwood-wordmark-horizontal.png" },
+          { "type": "wordmark_stacked",    "format": "png", "file": "sub-brands/beechwood/beechwood-wordmark-stacked.png" }
+        ]
+      }
+    }
+  ],
+  "brand_elements": {
+    "description": "Accent elements used throughout the visual identity to add emphasis and texture over backgrounds and content.",
+    "items": [
+      {
+        "name": "arrow",
+        "description": "Thin directional arrow. Use as a content accent or directional cue — placed over backgrounds or alongside calls-to-action.",
+        "usage": "Accent — use sparingly to direct attention or add visual rhythm.",
+        "assets": [
+          { "format": "svg", "file": "assets/elements/athens-church-arrow.svg" }
+        ]
+      },
+      {
+        "name": "dots",
+        "description": "Three-dot cluster. Use as a decorative accent to add visual texture alongside content blocks.",
+        "usage": "Accent — use sparingly for texture and brand character.",
+        "assets": [
+          { "format": "svg", "file": "assets/elements/athens-church-dots.svg" }
+        ]
+      }
+    ]
+  },
+  "personas": [
+    {
+      "id": "sean_seay",
+      "type": "leader",
+      "role": "lead_pastor",
+      "name": "Sean Seay",
+      "title": "Lead Pastor",
+      "bio": "Sean Seay is the founding Lead Pastor of Athens Church. In the spring of 2004, Sean — then North Point Ministries' Director of Equipping — felt led to investigate the Athens area for a church plant. After six years of prayer with his wife Bonnie about planting a church, Sean identified four committed families and launched Athens Church on January 23, 2005, in strategic partnership with North Point Ministries. He leads with a vision of building a church where people far from God can find their way to a growing relationship with Jesus Christ.",
+      "assets": [
+        {
+          "variant": "square",
+          "format": "jpg",
+          "file": "assets/personas/sean-seay/sean-seay-headshot-square.jpg"
+        }
+      ]
+    }
+  ],
+  "voice": {
+    "mission": "Helping everyone in Athens follow Jesus.",
+    "what_we_do": "We create environments for people, churched and unchurched, to experience and engage with Jesus and develop a faith of their own.",
+    "why_we_do_it": "We love Athens and believe in the transformative power of Jesus in our city.",
+    "what_makes_us_different": "We are the only church in Athens wholeheartedly focused on intentionally reaching the unchurched. We don't rely on one personality or a formula, but instead make intentional decisions and personal connections with the expectation that God will show up in incredible ways.",
+    "who_we_serve": "Broken people who need God. Whether they are returning to the fold or experiencing a church community for the first time, we are here for the spiritually curious — regardless of background — who are looking for a safe, no-judgment environment to develop their own faith.",
+    "summary": "Joyful, intentional, and disarming. Athens Church speaks to the spiritually curious with warmth and zero insider language. We lead with human reality and felt need, not theology-first. Our tone is the antithesis of religious — approachable, genuine, and rooted in authentic relationship.",
+    "personality": [
+      "joyful",
+      "intentional",
+      "accessible",
+      "familial",
+      "relational",
+      "authentic"
+    ],
+    "audience_hypotheses": [
+      "Our people had attended church fewer than 3 times in the previous 2 years before finding Athens Church.",
+      "The main driver bringing newcomers through the door is a felt need for purpose, meaning, or guidance — rooted in a personal earthly struggle, not a theological search.",
+      "People return because they felt a genuine personal connection on their first visit — not because of the sermon or production quality."
+    ],
+    "avoid": [
+      "Insider church language or Christian jargon that would make a first-time guest feel excluded",
+      "Theology-first framing — lead with the human need, not the doctrinal answer",
+      "Cold, corporate, or institutional tone",
+      "Overly formal or stiff sentence structure",
+      "Hype, pressure, or manufactured urgency"
+    ],
+    "writing_guidelines": [
+      "Write for the spiritually curious skeptic — someone open but not yet convinced.",
+      "Lead with the felt need or human struggle, then connect it to Jesus.",
+      "Use contractions. Write the way people actually talk.",
+      "Be direct and clear. Shorter sentences almost always land better.",
+      "Warmth over polish. Real over refined.",
+      "Capitalize 'He', 'Him', 'His' when referring to God or Jesus.",
+      "Never use the word 'unchurched' in public-facing copy — it's an insider term."
+    ]
+  },
+  "rules": [
+    "This brand-kit.json is the single source of truth for Athens Church. AI agents must load and strictly follow these paths, colors, and assets.",
+    "All paths in this file are relative to base_url. Construct full asset URLs by joining base_url + '/' + file.",
+    "For dark backgrounds: use alabaster or white logo variants. For light backgrounds: use charcoal, cinnabar, or blue-gray variants.",
+    "Typography hierarchy must be respected: Bookmania Italic for headings (sentence case), Tangier Italic for special display (uppercase), Helvetica Neue for subheadings (uppercase), Quasimoda for body copy (sentence case).",
+    "Bookmania, Tangier, and Quasimoda are licensed typefaces — do not substitute with system fonts in brand-forward contexts.",
+    "Maintain clear space equal to a 20px circle radius around all logomarks.",
+    "When referencing campus-specific content, use the appropriate sub_brand campus logos rather than the general Athens Church marks.",
+    "Write in the voice defined in this file — warm, genuine, and accessible. Avoid church jargon."
+  ]
+}
